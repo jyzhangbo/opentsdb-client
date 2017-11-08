@@ -8,9 +8,6 @@ import java.util.Map;
  */
 public class DataPoint {
 
-  /**
-   * 上传数据的类型.
-   */
   public String metric;
 
 
@@ -20,6 +17,8 @@ public class DataPoint {
 
   public Map<String, String> tags;
 
-
+  public DataPoint(String metric) {
+    this.metric = metric;
+  }
 
 }
