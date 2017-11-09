@@ -1,4 +1,4 @@
-package cn.ennwifi.opentsdb.builder;
+package cn.ennwifi.opentsdb.builder.put;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
 
-import cn.ennwifi.opentsdb.pojo.DataPoint;
+import cn.ennwifi.opentsdb.req.put.DataPoint;
 
 /**
  * @author zhangbo

@@ -1,34 +1,15 @@
-package cn.ennwifi.opentsdb.pojo;
+package cn.ennwifi.opentsdb.resp.put;
 
 /**
  * @author zhangbo
  *
  */
-public class PutResponse {
+public class PutErrorResp2 extends PutResp {
 
-  private int statusCode;
   private PutErrorDetail errorDetail;
 
-  public boolean isSuccess() {
-    return statusCode == 204;
-  }
-
-  public PutResponse(int statusCode) {
-    this.statusCode = statusCode;
-  }
-
-  /**
-   * @return the statusCode
-   */
-  public int getStatusCode() {
-    return statusCode;
-  }
-
-  /**
-   * @param statusCode the statusCode to set
-   */
-  public void setStatusCode(int statusCode) {
-    this.statusCode = statusCode;
+  public PutErrorResp2(int statusCode) {
+    super(statusCode);
   }
 
   /**

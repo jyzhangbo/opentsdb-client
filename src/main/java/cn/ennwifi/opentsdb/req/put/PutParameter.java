@@ -1,4 +1,4 @@
-package cn.ennwifi.opentsdb.pojo;
+package cn.ennwifi.opentsdb.req.put;
 
 /**
  * @author zhangbo

@@ -1,4 +1,6 @@
-package cn.ennwifi.opentsdb.pojo;
+package cn.ennwifi.opentsdb.resp.put;
+
+import cn.ennwifi.opentsdb.req.put.DataPoint;
 
 /**
  * @author zhangbo

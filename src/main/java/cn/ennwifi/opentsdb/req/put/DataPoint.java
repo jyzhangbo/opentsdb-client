@@ -1,5 +1,6 @@
-package cn.ennwifi.opentsdb.pojo;
+package cn.ennwifi.opentsdb.req.put;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -8,14 +9,14 @@ import java.util.Map;
  */
 public class DataPoint {
 
-  public String metric;
+  private String metric;
 
 
-  public Object value;
+  private Object value;
 
-  public Integer timestamp;
+  private Integer timestamp;
 
-  public Map<String, String> tags;
+  private Map<String, String> tags = new HashMap<>();
 
   public DataPoint() {}
 
@@ -66,5 +67,48 @@ public class DataPoint {
     this.timestamp = timestamp;
     return this;
   }
+
+  /**
+   * @return the value
+   */
+  public Object getValue() {
+    return value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(Object value) {
+    this.value = value;
+  }
+
+  /**
+   * @return the tags
+   */
+  public Map<String, String> getTags() {
+    return tags;
+  }
+
+  /**
+   * @param tags the tags to set
+   */
+  public void setTags(Map<String, String> tags) {
+    this.tags = tags;
+  }
+
+  /**
+   * @return the metric
+   */
+  public String getMetric() {
+    return metric;
+  }
+
+  /**
+   * @return the timestamp
+   */
+  public Integer getTimestamp() {
+    return timestamp;
+  }
+
 
 }

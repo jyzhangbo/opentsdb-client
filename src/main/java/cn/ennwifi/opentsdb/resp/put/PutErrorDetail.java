@@ -1,4 +1,4 @@
-package cn.ennwifi.opentsdb.pojo;
+package cn.ennwifi.opentsdb.resp.put;
 
 import java.util.List;
 

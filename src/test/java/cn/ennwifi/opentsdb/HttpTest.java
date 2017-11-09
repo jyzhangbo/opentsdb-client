@@ -1,11 +1,10 @@
 package cn.ennwifi.opentsdb;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.nutz.json.Json;
+import org.nutz.json.JsonFormat;
 
-import cn.ennwifi.opentsdb.pojo.PutErrorDetail;
+import cn.ennwifi.opentsdb.builder.put.DataPointBuild;
+import cn.ennwifi.opentsdb.resp.put.PutResp;
 
 /**
  * @author zhangbo
@@ -14,12 +13,14 @@ import cn.ennwifi.opentsdb.pojo.PutErrorDetail;
 public class HttpTest {
 
   public static void main(String[] args) {
-    Map<String, Object> map = new HashMap<>();
-    map.put("failed", 1);
-    map.put("success", 0);
-    String content = Json.toJson(map);
-    PutErrorDetail detail = Json.fromJson(PutErrorDetail.class, content);
-    System.out.println(detail);
+    DataPointBuild build = DataPointBuild.getInstance();
+    build.addDataPoint("meter.client").setValue("876", (int) (System.currentTimeMillis() / 1000)).addTag("host",
+        "zhangbo");
+
+    HttpClientImpl clientImpl = new HttpClientImpl("http://10.39.0.200:4242");
+    PutResp put = clientImpl.put(build);
+    System.err.println(Json.toJson(put, JsonFormat.tidy()));
+
   }
 
 }
