@@ -4,18 +4,31 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 采集点.
+ * 
  * @author zhangbo
  *
  */
 public class DataPoint {
 
+  /**
+   * 指标.
+   */
   private String metric;
 
-
+  /**
+   * 具体数值.
+   */
   private Object value;
 
+  /**
+   * 时间.
+   */
   private Integer timestamp;
 
+  /**
+   * 采集点标签.
+   */
   private Map<String, String> tags = new HashMap<>();
 
   public DataPoint() {}
@@ -24,21 +37,46 @@ public class DataPoint {
     this.metric = metric;
   }
 
+  /**
+   * 添加标签项.
+   * 
+   * @param tags
+   * @return
+   */
   public DataPoint addTags(Map<String, String> tags) {
     this.tags.putAll(tags);
     return this;
   }
 
+  /**
+   * 添加一个标签.
+   * 
+   * @param key
+   * @param value
+   * @return
+   */
   public DataPoint addTag(String key, String value) {
     this.tags.put(key, value);
     return this;
   }
 
+  /**
+   * 给指标赋值.
+   * 
+   * @param metric
+   * @return
+   */
   public DataPoint setMetric(String metric) {
     this.metric = metric;
     return this;
   }
 
+  /**
+   * 添加value.
+   * 
+   * @param value
+   * @return
+   */
   public DataPoint setValue(String value) {
     this.value = value;
     this.timestamp = (int) (System.currentTimeMillis() / 1000);

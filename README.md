@@ -10,7 +10,7 @@ The pom.xml
 	<dependency>
 	  <groupId>cn.ennwifi</groupId>
 	  <artifactId>opentsdb-client</artifactId>
-	  <version>0.0.1</version>
+	  <version>0.0.2</version>
 	</dependency>
 	
 

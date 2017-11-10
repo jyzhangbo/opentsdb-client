@@ -1,6 +1,8 @@
 package cn.ennwifi.opentsdb.req.query;
 
 /**
+ * 查询数据的filter类型.
+ * 
  * @author zhangbo
  *
  */

@@ -1,13 +1,15 @@
 package cn.ennwifi.opentsdb.req.query;
 
 /**
+ * 数据查询的filter.
+ * 
  * @author zhangbo
  *
  */
 public class QueryDataFilter {
 
   /**
-   * tagv的过滤规则.
+   * The name of the filter to invoke.
    */
   public String type;
 
@@ -17,7 +19,7 @@ public class QueryDataFilter {
   }
 
   /**
-   * tag的key.
+   * The tag key to invoke the filter on.
    */
   public String tagk;
 
@@ -27,7 +29,7 @@ public class QueryDataFilter {
   }
 
   /**
-   * tag的value.
+   * The filter expression to evaluate and depends on the filter being used.
    */
   public String filter;
 
@@ -37,7 +39,7 @@ public class QueryDataFilter {
   }
 
   /**
-   * 是否将结果按tag分组.
+   * Whether or not to group the results by each value matched by the filter.
    */
   public boolean groupBy = false;
 
