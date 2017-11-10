@@ -8,6 +8,7 @@ public class Error {
 
   public Integer code;
   public String message;
+  public String details;
   public String trace;
 
   /**
@@ -36,6 +37,20 @@ public class Error {
    */
   public void setMessage(String message) {
     this.message = message;
+  }
+
+  /**
+   * @return the details
+   */
+  public String getDetails() {
+    return details;
+  }
+
+  /**
+   * @param details the details to set
+   */
+  public void setDetails(String details) {
+    this.details = details;
   }
 
   /**
